@@ -4,7 +4,7 @@
     "description": "A PHP Library to Graph Manipulation.",
     "keywords": ["graph theory","graph"],
     "homepage": "https://github.com/bispojr/graphlib-php",
-    "license": "MIT",
+    "license": "MIT License",
     "authors": [
         {
             "name": "Esdras L. Bispo Jr.",
