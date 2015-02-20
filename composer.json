@@ -3,7 +3,7 @@
     "type": "library",
     "description": "A PHP Library to Graph Manipulation.",
     "keywords": ["graph theory","graph"],
-    "homepage": "http://github.com/Seldaek/monolog",
+    "homepage": "https://github.com/bispojr/graphlib-php",
     "license": "MIT",
     "authors": [
         {
