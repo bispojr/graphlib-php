@@ -124,5 +124,35 @@
 	        echo $output;   //It shows on browser
 	    }
 
+	    public function d3()
+	    {
+	    	$nodes = '[ ';
+	    	$i = 0;
+			foreach ($this->vertexSet as $vertex) {
+				$name = $vertex->getID();
+				$nodes .= '{"name": "'.$name.'"}, ';
+				$map[$name] = $i;
+				$i++;
+			}
+			$nodes = substr($nodes, 0, -2);
+			$nodes .= " ]";
+
+			$links = '[ ';
+
+			foreach ($this->edgeSet as $edge) {
+				$endPoints = $edge->getEndPoints();
+				$source = $endPoints[0]->getID();
+				$target = $endPoints[1]->getID();
+				$links .= '{"source" : nodes['.$map[$source].'], "target" : nodes['.$map[$target].']}, ';				
+			}
+			$links = substr($links, 0, -2);
+			$links .= " ]";
+
+			$data['nodes'] = $nodes;
+			$data['links'] = $links;
+
+			return $data;
+	    }
+
 	}
 ?>
