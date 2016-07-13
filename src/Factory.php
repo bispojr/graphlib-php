@@ -70,9 +70,9 @@
 						$g->addVertexByID("v".$i);
 
 					for($i=1, $i<=$whiteNumber; $i++)
-						for($j=whiteNumber+1; $j<=$n; $j++)
+						for($j=$whiteNumber+1; $j<=$n; $j++)
 							$g->addEdgeByID("v".$i, "v".$j);
-
+						
 					return $g;
 				}
 
