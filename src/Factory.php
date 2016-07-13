@@ -60,5 +60,23 @@
 
 	        return $g;
 	    }
+			public static function fullBipartite ($n){
+
+				if($n >=2){
+					$g = new Graph("Full Bipartite ".$n);
+					$whiteNumber = rand(1,$n-1);
+
+					for($i=1; $i<=$n; $i++)
+						$g->addVertexByID("v".$i);
+
+					for($i=1, $i<=$whiteNumber; $i++)
+						for($j=whiteNumber+1; $j<=$n; $j++)
+							$g->addEdgeByID("v".$i, "v".$j);
+
+					return $g;
+				}
+
+				return null;
+	    }
 	}
 ?>
