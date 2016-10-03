@@ -86,12 +86,12 @@
 					for($i=1; $i<=$n; $i++){
 						$g->addVertexByID("v".$i);
                         			if($i>1){
-                            				$g->addEdgeByID("v".$i, "v1");
                             				if ($i<$n)
                                 				$j=$i+1;
                             				else
                                 				$j=2;
-                            				$g->addEdgeByID("v".$i, "v".$j);
+                            				$g->addEdgeByID("v".$i, "v1"); //Grafo Estrela
+                            				$g->addEdgeByID("v".$i, "v".$j); //Grafo Roda
                         			}
                     			}
 					return $g;
