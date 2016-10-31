@@ -78,5 +78,24 @@
 
 				return null;
 	    }
+			public static function wheel ($n){
+
+				if($n >=4){
+					$g = new Graph("Wheel ".$n);
+                    			$g->addVertexByID("v1");
+					for($i=2; $i<=$n; $i++){
+						$g->addVertexByID("v".$i);
+                        			$g->addEdgeByID("v".$i, "v1");
+                        			if ($i<$n)
+                            				$j=$i+1;
+                        			else
+                            				$j=2;
+                       	 			$g->addEdgeByID("v".$i, "v".$j);
+                        
+                    			}
+					return $g;
+				}
+				return null;
+	    		}
 	}
 ?>
